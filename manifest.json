@@ -1,0 +1,10 @@
+{
+  "name": "Green Brisbane 2032",
+  "short_name": "GB2032",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#059669",
+  "lang": "en",
+  "description": "Static blog page for Green Brisbane 2032: See it. Join it. Share it."
+}
