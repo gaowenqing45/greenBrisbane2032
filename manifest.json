@@ -1,9 +1,0 @@
-{
-  "name": "Green Brisbane 2032",
-  "short_name": "GreenBrisbane",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#eaf5ea",
-  "theme_color": "#2e8b57",
-  "icons": []
-}
