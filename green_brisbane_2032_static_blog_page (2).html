@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Brisbane 2032: See it. Join it. Share it.</title>
+  <meta name="description" content="A static blog page outlining the Green Brisbane 2032 communication initiative: See it, Join it, Share it." />
+  <meta property="og:title" content="Green Brisbane 2032: See it. Join it. Share it." />
+  <meta property="og:description" content="Turning climate goals into public experiences through visibility, participation, and storytelling." />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: #101828;
+      --text: #e6eefc;
+      --muted: #b6c3e1;
+      --accent: #6ee7b7; /* mint green */
+      --accent-2: #60a5fa; /* blue */
+      --ring: rgba(110,231,183,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#059669; --accent-2:#2563eb; --ring:rgba(37,99,235,.2);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Noto Sans", Arial, "Apple Color Emoji","Segoe UI Emoji"; background:linear-gradient(180deg, var(--bg), #0f1a2e 40%, var(--bg) 100%); color:var(--text)}
+    a{color:var(--accent-2); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px; margin-inline:auto; padding:24px}
+
+    /* Top nav */
+    .nav{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:color-mix(in hsl, var(--bg) 75%, transparent); border-bottom:1px solid color-mix(in oklch, var(--text) 10%, transparent);}
+    .nav-inner{display:flex; gap:16px; align-items:center; justify-content:space-between; padding:12px 24px}
+    .brand{display:flex; gap:12px; align-items:center; font-weight:700; letter-spacing:.2px}
+    .brand .dot{width:10px;height:10px;border-radius:50%;background:conic-gradient(from 180deg, var(--accent), var(--accent-2)); box-shadow:0 0 0 4px var(--ring)}
+    .menu{display:flex; gap:18px; flex-wrap:wrap}
+    .menu a{padding:6px 10px; border-radius:999px; border:1px solid transparent}
+    .menu a:hover{border-color:color-mix(in oklab, var(--text) 15%, transparent); background-color:color-mix(in oklab, var(--text) 6%, transparent)}
+
+    /* Hero */
+    .hero{padding:72px 24px 32px; text-align:center}
+    .eyebrow{display:inline-block; font-size:13px; text-transform:uppercase; letter-spacing:.16em; color:var(--muted)}
+    h1{margin:.25em 0 .35em; font-size:clamp(28px, 5vw, 48px); line-height:1.1}
+    .subtitle{max-width:800px; margin:0 auto; color:var(--muted)}
+
+    /* Card layout */
+    .section{padding:24px}
+    .card{background:linear-gradient(180deg, color-mix(in oklch, var(--card) 88%, transparent), color-mix(in oklch, var(--card) 96%, transparent)); border:1px solid color-mix(in oklch, var(--text) 8%, transparent); border-radius:20px; padding:28px; box-shadow:0 10px 30px color-mix(in oklch, var(--text) 10%, transparent)}
+    .grid{display:grid; gap:20px}
+    @media (min-width:800px){ .grid{grid-template-columns:1.05fr .95fr} }
+
+    h2{font-size:clamp(22px, 3.2vw, 32px); margin:0 0 12px}
+    h3{font-size:clamp(18px, 2.6vw, 24px); margin:0 0 10px}
+    p{margin:0 0 12px}
+
+    .quote{border-left:3px solid var(--accent); padding-left:14px; color:var(--muted); font-style:italic}
+    .kicker{color:var(--muted)}
+    .tag{display:inline-flex; align-items:center; gap:8px; background:color-mix(in oklab, var(--text) 8%, transparent); border:1px solid color-mix(in oklab, var(--text) 12%, transparent); padding:6px 10px; border-radius:999px; font-size:14px}
+    .badge{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; background:conic-gradient(from 90deg, var(--accent), var(--accent-2)); color:#fff; font-weight:700}
+
+    /* Footer */
+    footer{margin-top:40px; padding:28px 24px 56px; text-align:center; color:var(--muted)}
+    .footline{opacity:.7}
+
+    /* Small helper UI */
+    .toc{display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin:18px 0 0}
+    .toc a{background:color-mix(in oklab, var(--text) 8%, transparent); border:1px solid color-mix(in oklab, var(--text) 12%, transparent); padding:6px 12px; border-radius:999px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <header class="nav" role="navigation" aria-label="Primary">
+    <div class="nav-inner container">
+      <div class="brand"><span class="dot" aria-hidden="true"></span> Green Brisbane 2032</div>
+      <nav class="menu" aria-label="In-page">
+        <a href="#intro">Introduction</a>
+        <a href="#see">See it</a>
+        <a href="#join">Join it</a>
+        <a href="#share">Share it</a>
+        <a href="#conclusion">Conclusion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="intro">
+      <span class="eyebrow">Green Brisbane 2032</span>
+      <h1>See it. Join it. Share it.</h1>
+      <p class="subtitle">
+        The 2032 Brisbane Olympic Games will mark a historic milestone for Queensland, not only as a sporting event but also as a test of how communication can shape collective action.
+        Brisbane has committed to becoming the world’s first <strong>Climate Positive Olympics</strong> — meaning that its total carbon reductions will exceed its emissions. Yet, for many residents, this phrase feels distant, abstract, or even suspicious. If people cannot see or feel the impact, the promise risks being dismissed as mere “greenwashing”.
+      </p>
+      <div class="toc" role="navigation" aria-label="Table of contents">
+        <a href="#see" aria-label="Jump to See it">See it</a>
+        <a href="#join" aria-label="Jump to Join it">Join it</a>
+        <a href="#share" aria-label="Jump to Share it">Share it</a>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="card">
+        <p>
+          In response, the Queensland Government has introduced <em>“Green Brisbane 2032: See it. Join it. Share it.”</em>, a communication initiative designed to transform sustainability from an invisible policy into a visible, shared, and participatory experience. The campaign uses a blend of digital visualization, community engagement, and public storytelling to build trust and pride among Brisbane’s residents. It reminds us that sustainability is not only about carbon numbers but also about community connections and human stories.
+        </p>
+      </div>
+    </section>
+
+    <section class="section container" id="see" aria-labelledby="see-title">
+      <div class="grid">
+        <article class="card">
+          $1
+          <img src="/mnt/data/ChatGPT Image 2025年10月18日 17_41_51.png" alt="Brisbane Environmental Progress real-time update display showing carbon emissions reduced, solar energy generated, and green areas created." style="width:100%; border-radius:12px; margin:16px 0;" />
+          <p>In the heart of Brisbane’s Queen Street Mall, a large digital dashboard lights up the public square. The screen displays real-time data about the city’s environmental progress — carbon reduction levels, solar energy generation, and new green zones added each week. For passersby, these changing numbers are more than statistics; they are proof that the city’s environmental promises are materializing. Every increase in renewable energy or decrease in emissions represents a shared achievement, not just a government report.</p>
+          <p class="quote">“When data steps out of reports and into the streets, we can truly see change happening.”</p>
+          <p>Through this visual strategic communication, sustainability becomes something that people can literally see in front of them. This transparency also strengthens credibility. By updating data openly, the government invites citizens to become witnesses to progress rather than passive recipients of information. Children stop to count how many trees were planted this month, while office workers snap photos of the live dashboard before posting them with hashtags like <strong>#ClimatePositiveBrisbane</strong>. The act of seeing itself becomes participatory.</p>
+        </article>
+        <aside class="card" aria-label="Live dashboard explainer">
+          <h3 class="kicker">How the live dashboard helps</h3>
+          <ul>
+            <li>Shows real-time progress: emissions ↓, renewables ↑, green zones ↑</li>
+            <li>Turns abstract metrics into shared, civic achievements</li>
+            <li>Builds credibility through transparent updates</li>
+          </ul>
+          <p class="tag" aria-label="Tag">
+            <span class="badge" aria-hidden="true">1</span>
+            Visibility builds trust
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section container" id="join" aria-labelledby="join-title">
+      <div class="grid">
+        <article class="card">
+          <h2 id="join-title">Join it — Turning Action into Participation</h2>
+          <p>Beyond visualization, the next step is participation. Across the city, Green Olympic Stations have been set up in parks, transport hubs, schools, and shopping centers. At these interactive kiosks, residents can scan a QR code to upload their personal eco-actions — walking or cycling instead of driving, reducing plastic waste, planting trees, or volunteering in local clean-ups. These actions are collected and displayed on a Green Leaderboard, showing how different neighborhoods are contributing to the Olympic sustainability goals.</p>
+          <p class="quote">“I saw my name on the leaderboard at the station screen — it felt great to know my small effort counts.”<br><em>— Emma, Brisbane resident</em></p>
+          <p>This system gamifies sustainability. Environmental responsibility is no longer a heavy duty; it becomes a playful and social experience. Local schools organize competitions for “most creative green project,” while families visit the stations together on weekends. Each small act, when aggregated, contributes to a sense of collective ownership. By turning environmental actions into public recognition, participation becomes both fun and meaningful — a new form of civic pride.</p>
+        </article>
+        <aside class="card" aria-label="Participation cues">
+          <h3 class="kicker">Ways to participate</h3>
+          <ol>
+            <li>Scan a QR code at a Green Olympic Station</li>
+            <li>Upload a recent eco-action</li>
+            <li>Watch your suburb climb the Green Leaderboard</li>
+          </ol>
+          <p class="tag">
+            <span class="badge" aria-hidden="true">2</span>
+            Small acts, big impact
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section container" id="share" aria-labelledby="share-title">
+      <div class="grid">
+        <article class="card">
+          <h2 id="share-title">Share it — From Audiences to Storytellers</h2>
+          <p>The campaign’s third phase invites citizens to share their personal stories online under the hashtag <strong>#MyGreenStory</strong>. Participants record short videos or photos showing how the Olympic spirit has inspired greener lifestyles — from installing solar panels and composting at home to hosting “zero-waste picnics” with friends. These stories are not polished advertisements but authentic voices from everyday life.</p>
+          <p class="quote">“Every personal story becomes part of Brisbane’s green legacy.”</p>
+          <p>Local journalists collaborate with the campaign, visiting communities to cover standout stories. Their reports appear in newspapers, podcasts, and short documentaries, amplifying the voices of ordinary people. Through this partnership, the media shift from being external observers to becoming storytellers of transformation. As residents tell their own stories, they transform from audience members into active narrators of social change. This process aligns perfectly with the participatory communication model — change happens not when people are told what to do, but when they feel part of the story.</p>
+        </article>
+        <aside class="card" aria-label="Share tools">
+          <h3 class="kicker">Join the conversation</h3>
+          <p>
+            Use the hashtag <strong>#MyGreenStory</strong> on your favourite platform. Tell a friend, tag your suburb, and add a short caption about what changed for you.
+          </p>
+          <button id="copyTag" type="button" style="margin-top:8px; padding:10px 12px; border-radius:10px; border:1px solid color-mix(in oklab, var(--text) 15%, transparent); background:color-mix(in oklab, var(--text) 6%, transparent); color:var(--text); cursor:pointer">Copy #MyGreenStory</button>
+          <p class="tag" style="margin-top:10px">
+            <span class="badge" aria-hidden="true">3</span>
+            Tell your story
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section container" id="conclusion" aria-labelledby="conclusion-title">
+      <div class="card">
+        <h2 id="conclusion-title">Conclusion — From Promise to Practice</h2>
+        <p>Through See it, Join it, and Share it, the Green Brisbane 2032 initiative redefines what strategic communication can achieve. It bridges the gap between vision and reality, policy and participation. By turning climate goals into public experiences, the campaign fosters transparency, collaboration, and trust — three essential elements for any sustainable future.</p>
+        <p>The Brisbane 2032 Olympics is no longer just about sports; it is about how a city tells its story to the world. When data becomes visible, when citizens act together, and when their stories are heard, sustainability moves from aspiration to action. As one resident wrote under #MyGreenStory, “We are not just watching the Olympics. We are building the legacy.”</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footline">© <span id="year"></span> Green Brisbane 2032. Built as a static demo page.</p>
+  </footer>
+
+  <button id="backToTop" class="sr-only" aria-label="Back to top">⬆</button>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy hashtag helper
+    document.getElementById('copyTag').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('#MyGreenStory');
+        const btn = document.getElementById('copyTag');
+        const label = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = label, 1500);
+      } catch(e) { alert('Copy not supported on this browser.'); }
+    });
+
+    // Reveal on scroll (simple)
+    const cards = document.querySelectorAll('.card');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ e.target.animate([
+          {opacity:0, transform:'translateY(12px)'},
+          {opacity:1, transform:'translateY(0)'}
+        ], {duration:500, easing:'ease-out'}); io.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    cards.forEach(c => io.observe(c));
+  </script>
+</body>
+</html>
